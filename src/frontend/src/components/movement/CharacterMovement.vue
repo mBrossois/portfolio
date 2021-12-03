@@ -16,9 +16,9 @@
 </template>
 
 <style lang="scss">
-.character {
-    position:absolute;
-}
+// .character {
+//     // position:absolute;
+// }
 
 .climbing .left-arm-half-up {
     animation: climbing 500ms infinite;
@@ -26,16 +26,17 @@
 
 .climbing .right-arm-half-up {
     animation: climbing 500ms 250ms infinite;
-    opacity: 0;
+    height: 0;
 }
 
 @keyframes climbing {
     0%, 49.9999% {
-        opacity: 1;
+        height: 150px;
     }
     50%, 100% {
-        opacity: 0;
-    }
+        height: 0;
+
+        }
 }
 
 
@@ -43,13 +44,13 @@
 
 <script lang="ts">
 import { Options, Vue } from 'vue-class-component';
-import CharacterFront from './CharacterFront.vue';
-import CharacterBackNeutral from './CharacterBackNeutral.vue';
-import CharacterBackArmsUp from './CharacterBackArmsUp.vue';
-import CharacterClimbLeftArmUp from './CharacterClimbLeftArmUp.vue';
-import CharacterClimbLeftArmHalfUp from './CharacterClimbLeftArmHalfUp.vue';
-import CharacterClimbRightArmUp from './CharacterClimbRightArmUp.vue';
-import CharacterClimbRightArmHalfUp from './CharacterClimbRightArmHalfUp.vue';
+import CharacterFront from './animation/CharacterFront.vue';
+import CharacterBackNeutral from './animation/CharacterBackNeutral.vue';
+import CharacterBackArmsUp from './animation/CharacterBackArmsUp.vue';
+import CharacterClimbLeftArmUp from './animation/CharacterClimbLeftArmUp.vue';
+import CharacterClimbLeftArmHalfUp from './animation/CharacterClimbLeftArmHalfUp.vue';
+import CharacterClimbRightArmUp from './animation/CharacterClimbRightArmUp.vue';
+import CharacterClimbRightArmHalfUp from './animation/CharacterClimbRightArmHalfUp.vue';
 
 
 @Options({

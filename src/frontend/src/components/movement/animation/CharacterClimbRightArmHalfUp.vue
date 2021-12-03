@@ -266,6 +266,6 @@
 <style lang="scss">
 #character-right-arm-half-up {
     transform-origin: 65px 96px;
-    transform: translateX(-27px) scale(6);
+    transform: translate(-27px, -18px) scale(6);
 }
 </style>
