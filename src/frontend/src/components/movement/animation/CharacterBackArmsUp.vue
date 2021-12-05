@@ -1,5 +1,5 @@
 <template>
-    <svg shape-rendering="crispEdges">
+    <svg id="character-back-arms-up" shape-rendering="crispEdges">
 <rect x="92" y="37" width="1" height="1" fill="#AA522A" />
 <rect x="93" y="37" width="1" height="1" fill="#AA522A" />
 <rect x="94" y="37" width="1" height="1" fill="#AA522A" />
@@ -269,3 +269,10 @@
 <rect x="101" y="63" width="1" height="1" fill="#663931" />
 </svg>
 </template>
+
+<style lang="scss">
+#character-back-arms-up {
+  transform-origin: 94px 37px;
+  transform: translate(-74px, -18px) scale(6);
+}
+</style>

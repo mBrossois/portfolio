@@ -1,9 +1,9 @@
 <template>
         <character-front class="character" v-if="pos === 0"></character-front>
         <character-back-neutral class="character" v-else-if="pos === 1"></character-back-neutral>
-        <character-back-arms-up class="character" v-else-if="pos === 2"></character-back-arms-up> 
-        
-        <div class="climbing" v-else-if="pos === 3">
+        <character-back-arms-up class="character" v-else-if="pos === 2"></character-back-arms-up>
+
+  <div class="climbing" v-else-if="pos === 3">
             <character-climb-left-arm-half-up class="character left-arm-half-up" ></character-climb-left-arm-half-up>
             <character-climb-right-arm-half-up class="character right-arm-half-up"></character-climb-right-arm-half-up>
         </div>
@@ -12,14 +12,10 @@
             <character-climb-left-arm-up class="character"></character-climb-left-arm-up>
             <character-climb-right-arm-up class="character"></character-climb-right-arm-up>
         </div>
-    
+
 </template>
 
 <style lang="scss">
-// .character {
-//     // position:absolute;
-// }
-
 .climbing .left-arm-half-up {
     animation: climbing 500ms infinite;
 }
