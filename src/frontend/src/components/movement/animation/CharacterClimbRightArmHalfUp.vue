@@ -112,11 +112,11 @@
 <rect x="58" y="95" width="1" height="1" fill="#000000" />
 <rect x="59" y="95" width="1" height="1" fill="#000000" />
 <rect x="60" y="95" width="1" height="1" fill="#000000" />
-<rect x="61" y="95" width="1" height="1" fill="#EEC39A" />
-<rect x="62" y="95" width="1" height="1" fill="#EEC39A" />
-<rect x="63" y="95" width="1" height="1" fill="#EEC39A" />
-<rect x="64" y="95" width="1" height="1" fill="#EEC39A" />
-<rect x="65" y="95" width="1" height="1" fill="#EEC39A" />
+<rect x="61" y="95" width="1" height="1" fill="#000000" />
+<rect x="62" y="95" width="1" height="1" fill="#000000" />
+<rect x="63" y="95" width="1" height="1" fill="#000000" />
+<rect x="64" y="95" width="1" height="1" fill="#000000" />
+<rect x="65" y="95" width="1" height="1" fill="#000000" />
 <rect x="66" y="95" width="1" height="1" fill="#000000" />
 <rect x="67" y="95" width="1" height="1" fill="#000000" />
 <rect x="68" y="95" width="1" height="1" fill="#000000" />

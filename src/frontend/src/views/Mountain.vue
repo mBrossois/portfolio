@@ -1,5 +1,5 @@
 <template>
-    <background></background>
+<!--    <background></background>-->
     
     <character></character>
 </template>

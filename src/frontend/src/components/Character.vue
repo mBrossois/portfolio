@@ -7,7 +7,16 @@
 <script lang="ts">
 import {Options, Vue} from 'vue-class-component';
 import CharacterMovement from './movement/CharacterMovement.vue';
-import {characterPos, moveDown, moveLeft, moveRight, moveUp} from '../utils/characterPositioning'
+import {
+  animationInAction,
+  characterPos, isBottomReached,
+  isTopReached,
+  moveDown,
+  moveLeft,
+  moveRight,
+  moveToNextLevel,
+  moveUp
+} from '../utils/characterPositioning'
 import {watch} from "vue";
 
 @Options({
@@ -33,7 +42,9 @@ export default class HelloWorld extends Vue {
     watch(() => (this.pressLeft || this.pressRight || this.pressDown || this.pressUp), (curr, old) => {
       if (curr) {
         this.moveInterval = setInterval(() => {
-          this.movement();
+          if(!animationInAction) {
+            this.movement();
+          }
         }, 200)
       } else {
         clearInterval(this.moveInterval);
@@ -42,6 +53,8 @@ export default class HelloWorld extends Vue {
   }
 
   onKeydown(e: KeyboardEvent): void {
+    e.preventDefault();
+
     if (e.key === "d" || e.key === "ArrowRight") {
       this.pressRight = true;
       this.pressLeft = false;
@@ -66,9 +79,18 @@ export default class HelloWorld extends Vue {
       moveLeft(this.$refs.characterContainer);
     }
     if (this.pressUp) {
-      moveUp(this.$refs.characterContainer);
+      if(isTopReached(this.$refs.characterContainer)) {
+        moveToNextLevel(this.$refs.characterContainer);
+        console.log('nex level?');
+      } else {
+        moveUp(this.$refs.characterContainer);
+      }
     } else if (this.pressDown) {
-      moveDown(this.$refs.characterContainer);
+      if(isBottomReached(this.$refs.characterContainer)) {
+        console.log('bottoms up');
+      } else {
+        moveDown(this.$refs.characterContainer);
+      }
     }
   }
 
@@ -85,9 +107,9 @@ export default class HelloWorld extends Vue {
     }
 
     if (!(this.pressLeft || this.pressRight || this.pressUp || this.pressDown)) {
-      this.pos = 2;
+      setTimeout(() => {this.pos = 2;
+      }, 200);
     }
-    console.log(e.key);
     this.$refs.characterContainer.style.transform = `translate(${characterPos.x}px, ${characterPos.y}px)`
   }
 }
@@ -96,7 +118,10 @@ export default class HelloWorld extends Vue {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .character {
-  height: 150px;
-  width: 300px;
+  position: absolute;
+  bottom: 0;
+  left: 45%;
+  height: 185px;
+  width: 115px;
 }
 </style>

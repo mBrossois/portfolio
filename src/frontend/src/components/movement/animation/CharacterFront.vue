@@ -1,6 +1,5 @@
 <template>
-    <div>
-        <svg id="character-front" version="1.1" shape-rendering="crispEdges">
+<svg id="character-front" version="1.1" shape-rendering="crispEdges">
 <rect x="28" y="37" width="1" height="1" fill="#AA522A" />
 <rect x="29" y="37" width="1" height="1" fill="#AA522A" />
 <rect x="30" y="37" width="1" height="1" fill="#AA522A" />
@@ -270,14 +269,13 @@
 <rect x="36" y="63" width="1" height="1" fill="#663931" />
 <rect x="37" y="63" width="1" height="1" fill="#663931" />
 </svg>
-    </div>
 </template>
 
 <style lang="scss">
 #character-front {
-    height: 70px;
+    height: 64px;
     width: 50px;
     transform-origin: 32px 38px;
-    transform: scale(10);
+    transform: translate(-24px,-133px) scale(6);
 }
 </style>

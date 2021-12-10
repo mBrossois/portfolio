@@ -272,10 +272,10 @@
 </template>
 
 <style lang="scss">
-#character-front {
+#character-back-neutral {
     height: 70px;
     width: 50px;
-    transform-origin: 32px 38px;
+    transform-origin: 31px 38px;
     transform: scale(10);
 }
 </style>

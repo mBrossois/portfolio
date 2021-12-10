@@ -6,6 +6,7 @@
 <rect x="95" y="37" width="1" height="1" fill="#AA522A" />
 <rect x="96" y="37" width="1" height="1" fill="#AA522A" />
 <rect x="97" y="37" width="1" height="1" fill="#AA522A" />
+<rect x="98" y="37" width="1" height="1" fill="#AA522A" />
 <rect x="85" y="38" width="1" height="1" fill="#EEC39A" />
 <rect x="86" y="38" width="1" height="1" fill="#EEC39A" />
 <rect x="91" y="38" width="1" height="1" fill="#AA522A" />
@@ -273,6 +274,6 @@
 <style lang="scss">
 #character-back-arms-up {
   transform-origin: 94px 37px;
-  transform: translate(-74px, -18px) scale(6);
+  transform: translate(-97px, -18px) scale(6);
 }
 </style>
